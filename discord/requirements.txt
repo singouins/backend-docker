@@ -1,0 +1,8 @@
+dataclasses
+discord.py
+pyMySQL
+numpy
+redis
+requests
+SQLAlchemy
+termcolor
