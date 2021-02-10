@@ -4,7 +4,7 @@ KO="\t[\e[91m✗\e[0m]"
 
 if [ ! -z $GIT_REPO ]
 then
-    echo -n `date +"%F %X"` Cloning
+    echo -n `date +"%F %X"` "Cloning"
 
     if [ $QUIET='True' ]
         then
@@ -23,7 +23,7 @@ else
         echo `date +"%F %X"` "Cloning not performed (GIT_REPO missing)"
 fi
 
-echo -n `date +"%F %X"` Updating
+echo -n `date +"%F %X"` "Updating"
 if [ $QUIET='True' ]
     then
         npm update --silent >/dev/null 2>&1
@@ -39,7 +39,7 @@ fi
 
 if [ -d $OUTPUT_PATH ]
 then
-    echo -n `date +"%F %X"` Building
+    echo -n `date +"%F %X"` "Building"
 
     if [ $QUIET='True' ]
     then
