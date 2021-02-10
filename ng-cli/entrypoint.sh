@@ -39,7 +39,11 @@ fi
 
 if [ -d $OUTPUT_PATH ]
 then
+<<<<<<< HEAD
     echo -n `date +"%F %X"` "Building"
+=======
+    echo -n `date +"%F %X"` Building ($BUILD_TYPE)
+>>>>>>> 3a4da33a12c9a044af009ccc1e0ef678ca19ee64
 
     if [ $QUIET='True' ]
     then
