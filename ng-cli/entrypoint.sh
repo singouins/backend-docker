@@ -39,13 +39,13 @@ fi
 
 if [ -d $OUTPUT_PATH ]
 then
-    echo -n `date +"%F %X"` Building
+    echo -n `date +"%F %X"` Building ($BUILD_TYPE)
 
     if [ $QUIET='True' ]
     then
-        cd /app && ng build --prod --outputPath=$OUTPUT_PATH >/dev/null 2>&1
+        cd /app && ng build --prod --configuration=$BUILD_TYPE --outputPath=$OUTPUT_PATH >/dev/null 2>&1
     else
-        cd /app && ng build --prod --outputPath=$OUTPUT_PATH
+        cd /app && ng build --prod --configuration=$BUILD_TYPE --outputPath=$OUTPUT_PATH
     fi
 
     if [ $? -eq 0 ]
