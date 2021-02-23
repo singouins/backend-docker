@@ -2,7 +2,7 @@ dataclasses
 Flask
 Flask-bcrypt
 Flask-cors
-Flask-JWT-Extended
+Flask-JWT-Extended == 3.25.0
 Flask-Swagger-UI
 logging-ldp
 marshmallow
