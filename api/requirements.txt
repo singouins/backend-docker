@@ -5,6 +5,7 @@ Flask-cors
 Flask-JWT-Extended
 Flask-Swagger-UI
 logging-ldp
+marshmallow
 prometheus-flask-exporter
 pyMySQL
 redis
