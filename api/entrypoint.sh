@@ -11,7 +11,13 @@ rm -rf /tmp/sep.zip &&
 wget -q https://api.github.com/repos/lordslair/sep-backend/commits/master -O - 2&>1 | grep '^  .sha' | cut -d'"' -f4 > /code/.git
 echo "`date +"%F %X"` Loading done ..."
 
-exec flask run --host=$FLASK_HOST \
-               --port=$FLASK_PORT \
-               $FLASK_DEBUG \
-               $FLASK_THREAD
+exec gunicorn app:app \
+	      --bind $GUNICORN_HOST:$GUNICORN_PORT \
+	      --log-file=- \
+        --access-logfile=- \
+        --error-logfile=- \
+        --worker-tmp-dir /dev/shm \
+        --workers=$GUNICORN_WORKERS \
+        --threads=$GUNICORN_THREADS \
+        --worker-class=gthread \
+        $GUNICORN_RELOAD
