@@ -47,7 +47,7 @@ else
     echo -e $KO
 fi
 
-if [ -d $FULLPATH ]
+if [ -d $OUTPUT_PATH ]
 then
     echo -n `date +"%F %X"` "Building"
 
